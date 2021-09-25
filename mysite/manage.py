@@ -7,6 +7,6 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     return"hello world"
-@app.route("/<string:name>/<int:year>/<int:date>")
+@app.route("/<string:name>/<int:date>/<int:year>")
 def hello(name,year,date):
-    return f"hello, {name},{year},{date}"
+    return f"hello, {name},tu edad es {date}, naciste en {year}"
